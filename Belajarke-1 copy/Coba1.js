@@ -1,16 +1,9 @@
-let day = [
-    [1, 3, 3],
-    [1, 7, 3],
-    [1, 2, 3],
-];
-
-let maxWealth;
-day.forEach((number) => {
-    sum = number.reduce((a, b) => {
-        a + b, 0;
-    });
-
-    maxWealth = Math.max(maxWealth, sum);
-
-    console.log('costumer has wealth =' + maxWealth);
-});
+var maximumWealth = function (accounts) {
+    let arr = [];
+    let num = 0;
+    for (let j = 0; j < accounts.length; j++) {
+        const sum = accounts[j].reduce((a, b) => a + b, 0);
+        arr.push(sum);
+    }
+    return Math.max(...arr);
+};
